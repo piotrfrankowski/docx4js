@@ -332,11 +332,11 @@ var ZipDocument = function () {
 				window.URL.revokeObjectURL(url);
 			} else {
 				var _data = newDoc.generate(_extends({}, options, { type: "nodebuffer" }));
-				return new Promise(function (resolve, reject) {
-					return require("f" + "s").writeFile(file, _data, function (error) {
-						error ? reject(error) : resolve(_data);
-					});
-				});
+				// return new Promise(function (resolve, reject) {
+				// 	return require("f" + "s").writeFile(file, _data, function (error) {
+				// 		error ? reject(error) : resolve(_data);
+				// 	});
+				// });
 			}
 		}
 	}, {
