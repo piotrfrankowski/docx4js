@@ -391,11 +391,11 @@ var ZipDocument = function () {
 
 				if (typeof inputFile == 'string') {
 					//file name
-					require('fs').readFile(inputFile, function (error, data) {
-						if (error) reject(error);else if (data) {
-							parse(data, { name: inputFile.split(/[\/\\]/).pop().replace(/\.docx$/i, '') });
-						}
-					});
+					// require('fs').readFile(inputFile, function (error, data) {
+					// 	if (error) reject(error);else if (data) {
+					// 		parse(data, { name: inputFile.split(/[\/\\]/).pop().replace(/\.docx$/i, '') });
+					// 	}
+					// });
 				} else if (inputFile instanceof Blob) {
 					var reader = new FileReader();
 					reader.onload = function (e) {
@@ -3324,8 +3324,8 @@ function read_date(blob, offset) {
 
 var fs;
 function readFileSync(filename, options) {
-	if(fs == null) fs = require('fs');
-	return parse(fs.readFileSync(filename), options);
+	// if(fs == null) fs = require('fs');
+	// return parse(fs.readFileSync(filename), options);
 }
 
 function readSync(blob, options) {

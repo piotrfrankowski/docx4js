@@ -181,13 +181,13 @@ export default class ZipDocument{
 			}
 
 			if(typeof inputFile=='string'){//file name
-				require('fs').readFile(inputFile,function(error, data){
-					if(error)
-						reject(error);
-					else if(data){
-						parse(data, {name:inputFile.split(/[\/\\]/).pop().replace(/\.docx$/i,'')})
-					}
-				})
+				// require('fs').readFile(inputFile,function(error, data){
+				// 	if(error)
+				// 		reject(error);
+				// 	else if(data){
+				// 		parse(data, {name:inputFile.split(/[\/\\]/).pop().replace(/\.docx$/i,'')})
+				// 	}
+				// })
 			}else if(inputFile instanceof Blob){
 				var reader=new FileReader();
 				reader.onload=function(e){
